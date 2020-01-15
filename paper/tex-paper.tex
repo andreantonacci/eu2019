@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Working title: Social Network Analysis of Twitter Topic-Network Structures during the 2019 European Elections
+%% Andrea Domenico Antonacci, a.d.antonacci@tilburguniversity.edu
+%% January 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{amsmath} % Load amsmath first
+\documentclass[a4paper,12pt]{article}
+% Set margins
+\usepackage[margin=1in]{geometry}
+% Set language
+\usepackage[russian,greek.ancient,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,OT2,T1]{fontenc}
+\DeclareTextFontCommand{\textcyr}{\cyr}
+% Define fonts
+\usepackage{tempora} % Used for special characters not available in mainfont
+% \usepackage{gfsdidot} % Use Didot font
+\usepackage{mathpazo} % Or use Palatino font
+% Set line spacing
+\renewcommand{\baselinestretch}{1.5}
+% Allow multi-column environments
+\usepackage{multicol}
+\setlength\columnsep{40pt}
+% Formulas and math
+\usepackage{amssymb}
+\usepackage{algorithm} % For algorithms
+\usepackage{algpseudocode}
+\usepackage{units} % Allow nice in-line, diagonal fractions
+% Define bibliography
+\usepackage[authoryear]{natbib}
+\bibliographystyle{apa}
+% Allow hyperref with click-through sections and references
+\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false]{hyperref}
+\hypersetup{pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false,pdfauthor={Andrea Domenico Antonacci},colorlinks=true,linkcolor=ForestGreen,citecolor=ForestGreen}
+% Allow fancy headers
+\usepackage{fancyhdr}
+\fancypagestyle{SectionFirstPage}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % Use this pagestyle to hide headers on the first page of sections
+\renewcommand{\floatpagefraction}{.9}% Set the amount of figures for floatpages
+% Misc packages
+\usepackage{setspace} % To set line spacing locally
+\usepackage{graphicx} % Allow figures
+\graphicspath{ {images/} }
+\usepackage{lipsum} % For prototyping
+\usepackage[dvipsnames]{xcolor} % Enable more colors in text
+\usepackage{microtype} % Improve justification
+\usepackage{url} % Line-breaking urls
+\usepackage{pdflscape} % Allow pages in landscape mode
+\usepackage{multirow} % Allow multirow in tables
+\usepackage[labelfont=bf]{caption} % Set caption distances from tables and figures
+\usepackage{subcaption} % For subfigures
+\captionsetup[table]{skip=10pt, position=top}
+\captionsetup[figure]{belowskip=10pt, skip=5pt, position=top}
+\usepackage[nottoc]{tocbibind}
+\usepackage{makecell} % Allow to break lines inside a table cell
+\usepackage[para]{threeparttable}
+\usepackage{rotating}
+\usepackage{textcomp} % For symbols
+\usepackage{tikz} % For graphs and graphics
+\usetikzlibrary{shapes.geometric, shapes.misc, arrows, positioning}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} % Define a checkmark (tick)
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=2cm, text centered, text width=2.5cm, draw=black]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{arrow} = [->,>=triangle 45]
+\usepackage{varioref} % Intelligent references with pageref automatically added
+
+% Define title page
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill} % To vertically center it
+\renewcommand\maketitlehookd{\vfill\null}
+\title{Social Network Analysis of Twitter Topic-Network Structures during the 2019 European Elections}
+\author{Andrea Domenico Antonacci, SNR 2032465}
+% \date{October 2019} % Uncomment for custom date
+% \global\hyphenpenalty=100000 % avoid hyphenation globally, for debug only
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Content below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Title page
+{ % Use curly brackets to create a group and assign properties locally
+\setstretch{1.0}
+\maketitle\thispagestyle{empty}
+\vspace{1cm}
+{\large {Master Thesis in Marketing Management\par Tilburg School of Economics and Management\par Tilburg University\par}}
+}
+\vspace{1cm}
+{
+\setstretch{1.0}
+\begin{multicols}{3}
+\raggedright
+Supervisor:\\Second reader:
+\vfill\null
+\columnbreak
+dr. Hannes Datta\\Nazli Alagöz
+\vfill\null
+\columnbreak
+Associate Professor\\Ph.D. Candidate
+\end{multicols}
+}
+
+% TOC
+{ % Use curly brackets to create a group and assign properties locally
+\newpage
+\setstretch{1.0}
+\hypersetup{linkcolor=black} % Links in TOC are black
+\pagenumbering{roman}
+\tableofcontents
+}
+
+% Abstract
+\newpage
+\begin{abstract}
+\addcontentsline{toc}{section}{Abstract}
+This paper explores how Twitter users differently interact based on the topic of discussion in online conversations. For this purpose, we employ concepts of Social Network Analysis to examine how node-level network topology measures may affect the likelihood of interaction and the extent to which two nodes interact in distinct topic-network structures. We collect 21 million sampled tweets via the Twitter API, tracking more than 700 keywords during the 2019 European Elections. We perform our analysis on a final data set of 2,259,717 tweets on five politics-related topics. We find systematic differences in the direction of the effect of centrality measures between distinct topics of discussion, but not for degree and clustering metrics. Notably, the target user’s eigencentrality positively predicts the interaction between users, regardless of the topic. However, among the pairs of interacting users, the direction of this effect varies between topics. We also show that the sender’s eigencentrality negatively influences the probability of interaction, but not the extent to which users interact between them.
+\end{abstract}
+
+% Content
+\newpage
+\pagestyle{fancy} % Initiate headers
+% Define global headers for all the sections
+\lhead{\nouppercase{\rightmark}}
+\rhead{}
+\pagenumbering{arabic}
+\include{section-1}
+\include{section-2}
+\include{section-3}
+\include{section-4}
+\include{section-5}
+\include{section-6}
+
+% Acknowledgements
+\newpage
+\thispagestyle{plain} % Suppress headers locally
+\section*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+This project is partly supported by research funds from Tilburg School of Economics and Management. I thank my supervisor, dr. Hannes Datta, for his guidance and having encouraged this project from the very beginning, instilling in me the passion for data analysis.
+
+This thesis would not have been possible without the aid and support of my friends and valuable proofreaders Edoardo, Manuele, Marco, and Valentina. I owe them much.
+
+Last but by no means least, I wish to thank my parents, my great emotional (and financial...) supporters who every day encourage me in all of my passions and inspire me to chase my dreams.
+
+% Bibliography
+\newpage
+\thispagestyle{SectionFirstPage} % Hide headers on the first page of the section
+\lhead{Bibliography}
+\rhead{}
+\renewcommand\refname{Bibliography}
+\bibliography{bib.bib}
+
+% Appendices
+\appendix
+\renewcommand\thefigure{\thesection.\arabic{figure}}
+\renewcommand\thetable{\thesection.\arabic{table}} % Renew figure and table counters and have the appendix letter before it
+\lhead{\nouppercase{\rightmark}} % Renew headers
+\rhead{}
+\include{appendix-a}
+\include{appendix-b}
+
+\end{document}

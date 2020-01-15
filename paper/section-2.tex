@@ -1,0 +1,81 @@
+\section{Literature Review}\label{Literature}\thispagestyle{SectionFirstPage} % Hide headers on the first page of the section
+
+% \subsection{Related Work on Social Network Topology}
+A vast body of research has focused on SNA applied to online social networks. Because of the nature of this paper, we put emphasis on three streams of literature that deal with the topological analysis of social networks, while we neglect the numerous studies devoted to other disciplines – e.g., linguistics, mostly focused on text analysis, user generated content, etc. Our classification of the current literature is summarized in Table \vref{literature-overview}.
+
+The first group of studies addresses information diffusion, namely how information propagates throughout the network. Many articles in this group focus on the issue of social influence, that is the change in behavior of individuals attributable to other actors in a network. The strength of such social influence may depend on many factors, such as tie strength, the distance between users in the network, etc. \citep{aggarwal:2011}.
+For instance, researchers in this group use Twitter data to investigate the influence of word of mouth (WOM) on consumer demand for new products \citep{deer:2019}, as well as social influence of important actors – called middle-level gatekeepers, who have between 1,800 and 26,000 followers on Twitter – in the spreading of viral events \citep{hemsley:2019}.
+Similarly, \citet{aral:2007} show how demographics, network factors, functional relationships, and the strength of ties influence the diffusion of news, compared to the diffusion of discussion topics. They find that, while demographic and network factors always heavily influence diffusion, tie strength only does so in the diffusion of discussion topics. Unfortunately, this study is based on email data and the question remains on whether the same conclusions apply to other OSN, such as social media platforms like Twitter. \citet{lerman:2010} conduct a similar study on news propagation based on Digg and Twitter data sets, but without controlling for the effect of network factors such as centrality. Likewise, \citet{liu-thompkins:2012} concentrates on seeding strategies to spread viral messages and shows that choosing highly influential users with strong ties is a better strategy than simply opting for a wider reach. Lastly, \citet{zhang:2013} model the propagation probability based on topic relevance to the target message, although without controlling for the effect of network metrics. Unfortunately, all the approaches adopted by this group of studies are limited in showing the interaction of topics and network factors.
+
+The second set of papers deals with community identification in OSN. Studies on community detection highlight the structure of relationships in the network and identify the users with a particular position. For instance, \citet{grandjean:2016} tries to answer to the question of ``who's following who?'' in a descriptive network analysis. Similarly, \citet{java:2007} document users intentions associated in a community and find that users with similar intentions tend to connect more with each other. \citet{zhao:2012} take a step closer to the analysis of topic-network structures and propose a topic-oriented community detection approach. However, a gap remains in our knowledge regarding how these topical clusters differ on a network metrics basis, and whether such differences can be explained and uniquely attributed to the distinct topics of discussion on online social media platforms.
+
+The third stream of research, in which we position our own work, examines topic-network structures in the context of OSN. These studies center around the spreading of topics through the graph, taking into account different network factors and tracking the structure of information spread as if it was an ``infection'''s growth, drawing inspiration from epidemiological studies.
+\citet{ardon:2013} perform a large scale measurement study, observing temporal, spatial, and geographical evolution of both popular and less popular topics. However, their approach remains topic-centered and does not investigate the interaction of users. % from topic pov. --> dv is not interaction of Users, but topic diff
+One method to address this issue is to model the strength of topic-level direct and indirect influence between nodes in a network, and later apply it to predict user behavior \citep{liu:2010, tang:2009, lim:2016}.
+Some researchers adopt a different approach and, instead of relying on hashtags, they infer the topics of discussion from a text analysis, where an unsupervised machine learning technique is used to identify latent topic information \citep{hong:2010, lhuillier:2011}. Unfortunately, these studies cannot be taken as evidence for the existence of a causal link between the differences in network measures and the interacting topics of discussion.
+There are several ways of handling this problem. Many scholars tried to characterize information diffusion in entire networks using a single network measurement only - e.g., density, or centrality.
+\citet{himelboim:2017} recognize the pitfall and overcome this difficulty by classifying Twitter conversations based on multiple network-level measurements and patterns of information flow. In fact, the authors claim that to gain insights on information flow for the whole network it is crucial to integrate single network-level measurements with one another. Nevertheless, their findings do not imply that the observed differences can be uniquely attributed to the distinct topics in question, as no causal relationship is assessed.
+
+The contribution of this paper to the literature is twofold. First, we aim at reconstructing topic-network structures to subsequently test the differences of multiple network-level measurements among topics with three generalized linear models. As a second contribution, we propose an easily reproducible methodology for data collection and modeling, that could serve as a blueprint for similar large-scale social network analyses, and facilitate the replication of a real-time data collection and visualization environment.
+
+\newpage
+\thispagestyle{SectionFirstPage}
+\renewcommand{\arraystretch}{1.2}
+\begin{sidewaystable}
+  % \setlength\extrarowheight{1pt} % provide a bit more vertical whitespace
+  \centering
+  \footnotesize
+  \captionsetup{size=footnotesize}
+  \caption{Current literature overview of topological SNA applied to online social networks.\label{literature-overview}}
+  \begin{threeparttable}
+  \begin{tabular}{ l c c c c c c c c }
+    \hline
+    \multirow{2}{*}{Paper} & \multicolumn{4}{c}{Effect of} & \multirow{2}{*}{Outcome measure(s)} & \multirow{2}{*}{Topic(s) control} & \multirow{2}{*}{Text data} & \multirow{2}{*}{Data size} \\
+    & degree & tie strength & centrality & clustering & & & & \\
+    \hline
+    \multicolumn{9}{l}{\textit{Information diffusion}} \\
+    \citet{aral:2007} & & \checkmark & \checkmark & & information awareness & \checkmark & & 125,000 emails \\
+    \citet{deer:2019} &  &  &  &  & consumer demand for movies & & \checkmark & 50M tweets \\
+    \citet{hemsley:2019} &  &  &  &  & information spreading &  &  & 11,000 tweets \\
+    \citet{lerman:2010} & \checkmark &  &  &  & information spreading & \checkmark &  & 137,582 Twitter users \\
+    \citet{liu-thompkins:2012} & \checkmark & \checkmark &  &  & \# of views per video & &  & 101 YouTube videos \\
+    \citet{timm:2016} & \checkmark &  & \checkmark &  & –\textsuperscript{a} & \checkmark & \checkmark & 51,000 tweets \\
+    \citet{zhang:2013} & \checkmark &  &  &  & propagation probability & \checkmark &  & 10,892 Twitter users \\
+    \multicolumn{9}{l}{\textit{Community identification}} \\
+    \citet{grandjean:2016} & \checkmark &  & \checkmark &  & –\textsuperscript{b} &  &  & 2,500 users \\
+    \citet{java:2007} & \checkmark &  &  &  & –\textsuperscript{b} &  &  & 76,177 users \\
+    \citet{zhao:2012} & \checkmark & \checkmark &  &  & purity of topics in community & \checkmark &  & \makecell{275,332 emails,\\1,490 webblogs,\\2,708 papers} \\
+    \multicolumn{9}{l}{\textit{Topic-network structures}} \\
+    \citet{ardon:2013} & \checkmark &  & \checkmark & \checkmark & topic popularity & \checkmark &  & \makecell{10M users,\\5.96M topics} \\
+    \citet{himelboim:2017} &  &  & \checkmark &  & –\textsuperscript{c} & \checkmark &  & 60 topics \\
+    \citet{hong:2010} &  &  &  &  & –\textsuperscript{d} & \checkmark & \checkmark & \makecell{1,992,758 tweets,\\514,130 users} \\
+    \citet{lhuillier:2011} &  &  & \checkmark &  & –\textsuperscript{d} & \checkmark & \checkmark & 29,057 posts \\
+    \citet{lim:2016} &  &  &  &  & –\textsuperscript{e} & \checkmark &  & \makecell{60,370 +\\781,186 tweets} \\
+    \citet{liu:2010} & \checkmark & \checkmark &  &  & influence strength & \checkmark &  & 40,000 users \\
+    \citet{tang:2009} & \checkmark & \checkmark &  &  & interacted, \# of interactions & \checkmark &  & \makecell{2,329,760 papers,\\640,134 authors,\\18,518 films} \\
+    % Is tang et al on interacted and no of interactions?
+    \textsc{This paper} & \checkmark &  & \checkmark & \checkmark & interacted, \# of interactions & \checkmark &  & 21,337,037 tweets \\
+    \hline
+    % \textit{Note:}  & \multicolumn{8}{r}{{*}They used an agent-based actor model to run a social simulation;} \\
+    % & \multicolumn{8}{r}{{**}They applied algorithms such as Clique Percolation Method (CPM) to find overlapping communities.} \\
+    % & \multicolumn{8}{r}{{***}They used the Clauset–Newman–Moore clustering algorithm included in the NodeXL package.} \\
+  \end{tabular}
+  \begin{tablenotes}
+\item[a]{They use an agent-based actor model to run a social simulation.}
+\item[b]{They apply algorithms such as Clique Percolation Method (CPM) to find overlapping communities.}
+\item[c]{They use the Clauset–Newman–Moore clustering algorithm included in the NodeXL package.}
+\item[d]{They use the Latent Dirichlet Allocation technique to run a text analysis.}
+\item[e]{They use hierarchical Poisson-Dirichlet processes (PDP) for text modeling.}
+\end{tablenotes}
+\end{threeparttable}
+\end{sidewaystable}
+% 1 paper
+% 2 degree
+% 3 tie strength
+% 4 centrality
+% 5 clustering
+% 6 outcome measure
+% 7 per topic
+% 8 text data
+% 9 data size
+% 10 Modeling

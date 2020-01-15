@@ -1,0 +1,38 @@
+\section{Models}\label{Models}\thispagestyle{SectionFirstPage} % Hide headers on the first page of the section
+\subsection{Considerations on Multicollinearity}\label{multicollinearity}
+Results from preliminary test models suggest severe multicollinearity issues due to the strong correlation between some variables. Because several variables in our data set measure similar concepts, we identify the most meaningful ones to include in our models.
+
+We choose \textit{eigencentrality} among the set of available centrality measures because it takes into account the extent to which a node is connected to highly influential nodes. Furthermore, we do not include other centrality variables because they can be seen as a linear transformation of a different measure – e.g., in the case of \textit{closeness centrality} with \textit{harmonic closeness centrality} or with the proposed degree variable.
+
+Among the group of degree measures, we select \textit{outdegree} because the number of outbound connections of a node can predict the overall number of interactions between that node and any other one in the network. Moreover, \textit{outdegree} correlates weakly with the proposed centrality measure. On the contrary, \textit{indegree} has an average positive correlation to \textit{eigencentrality} of .87 between the five topic-networks, and therefore, despite its potential contribution, we exclude it from our regressions.
+
+We also included interaction terms in our preliminary models – between variables from different groups, and between the same variable for the source node and the target one – but all of them caused significant multicollinearity issues (VIF > 30) and did not contribute to increasing the explanatory power of the model. Thus, we decide not to include any interaction term in our final models.
+\subsection{Multiple Linear Regression}
+We first construct a multiple linear regression model (called model A, or complete OLS) that is run for all five topic-network structures, where the explained variable is \textit{interactions} – i.e., the number of interactions between the source and target nodes. This relationship is directed, which means that the number of interactions between nodes $A$ and $B$ might be different from the one between $B$ and $A$. We include as explanatory variables \textit{outdegree}, \textit{eigencentrality}, and the \textit{clustering coefficient} for both of the nodes in every pair of nodes (see Equation \vref{eq:1}). This model runs on all possible pairs of users in a topic-network and not only on those users who interacted with each other.
+
+\begin{equation}
+  Y=\beta_0\,+\,\beta_1\,OD_{u1}\,+\,\beta_2\,EC_{u1}\,+\,\beta_3\,CL_{u1}\,+\,\beta_4\,OD_{u2}\,+\,\beta_5\,EC_{u2}\,+\,\beta_6\,CL_{u2}+\epsilon \label{eq:1}
+\end{equation}
+{\footnotesize
+\begingroup
+\addtolength{\jot}{-5pt}
+\begin{align*}
+  \text{where  }~Y &= \text{number of interactions between the source and target nodes (directed)} \\
+  OD\textsubscript{u1} &= \text{outdegree for the source node} \\
+  EC\textsubscript{u1} &= \text{eigencentrality for the source node} \\
+  CL\textsubscript{u1} &= \text{clustering for the source node} \\
+  OD\textsubscript{u2} &= \text{outdegree for the target node} \\
+  EC\textsubscript{u2} &= \text{eigencentrality for the target node} \\
+  CL\textsubscript{u2} &= \text{clustering for the target node}
+\end{align*}
+\endgroup
+}%
+\subsection{Logistic and Conditional Linear Regression}
+We build a logistic regression model (model B, or logistic) to predict the likelihood that paired users will interact with each other. Therefore, the dependent variable is the dichotomous \textit{interacted}. The independent variables are the same as in model A (see Equation \vref{eq:2}).
+
+\begin{equation}
+  P(interacted)=\frac{e^{b_0\,+\,b_1\,OD_{u1}\,+\,b_2\,EC_{u1}\,+\,b_3\,CL_{u1}\,+\,b_4\,OD_{u2}\,+\,b_5\,EC_{u2}\,+\,b_6\,CL_{u2}}}{1+e^{b_0\,+\,b_1\,OD_{u1}\,+\,b_2\,EC_{u1}\,+\,b_3\,CL_{u1}\,+\,b_4\,OD_{u2}\,+\,b_5\,EC_{u2}\,+\,b_6\,CL_{u2}}} \label{eq:2}
+\end{equation}
+
+\vspace{15pt}
+Finally, we build another multiple linear regression model (model C, or conditional OLS), which runs on a filtered subset of our data for all the pairs of nodes where \textit{interacted} is true (1). The model equation is the same as Equation \vref{eq:1}.
