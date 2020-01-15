@@ -18,6 +18,17 @@ processed_data/
 # Ban DS_Store
 .DS_Store
 
+  
+# R History files
+.Rhistory
+.Rapp.history
+
+# R Session Data files
+.RData
+
+# R User-specific files
+.Ruserdata
+
 # C extensions
 *.so
 
