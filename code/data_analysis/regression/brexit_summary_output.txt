@@ -1,0 +1,27 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 10:10:33 AM
+\begin{table}[!htbp] \centering 
+  \caption{Summary stats for topic: brexit} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+indegree & 4,843 & 1.905 & 7.165 & 0 & 0 & 1 & 211 \\ 
+outdegree & 4,843 & 1.905 & 3.938 & 0 & 0 & 3 & 76 \\ 
+Degree & 4,843 & 3.810 & 7.806 & 1 & 1 & 4 & 211 \\ 
+weighted indegree & 4,843 & 2.711 & 10.798 & 0 & 0 & 2 & 274 \\ 
+weighted outdegree & 4,843 & 2.711 & 6.094 & 0 & 0 & 4 & 121 \\ 
+Weighted Degree & 4,843 & 5.422 & 12.012 & 1 & 1 & 5 & 274 \\ 
+Eccentricity & 4,843 & .441 & .642 & 0 & 0 & 1 & 4 \\ 
+closnesscentrality & 4,843 & .353 & .466 & 0 & 0 & 1 & 1 \\ 
+harmonicclosnesscentrality & 4,843 & .357 & .469 & 0 & 0 & 1 & 1 \\ 
+betweenesscentrality & 4,843 & .751 & 16.555 & 0 & 0 & 0 & 790 \\ 
+modularity\_class & 4,843 & .306 & 2.283 & 0 & 0 & 0 & 26 \\ 
+clustering & 4,843 & .004 & .031 & 0 & 0 & 0 & 0 \\ 
+eigencentrality & 4,843 & .009 & .036 & 0 & 0 & .01 & 1 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 

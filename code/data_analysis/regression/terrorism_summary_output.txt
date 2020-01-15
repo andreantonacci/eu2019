@@ -1,0 +1,27 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 10:10:34 AM
+\begin{table}[!htbp] \centering 
+  \caption{Summary stats for topic: terrorism} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+indegree & 2,033 & 2.224 & 6.831 & 0 & 0 & 2 & 93 \\ 
+outdegree & 2,033 & 2.224 & 1.925 & 0 & 0 & 3 & 15 \\ 
+Degree & 2,033 & 4.448 & 6.588 & 1 & 3 & 4 & 97 \\ 
+weighted indegree & 2,033 & 4.029 & 12.562 & 0 & 0 & 4 & 216 \\ 
+weighted outdegree & 2,033 & 4.029 & 3.850 & 0 & 0 & 8 & 35 \\ 
+Weighted Degree & 2,033 & 8.058 & 12.334 & 1 & 4 & 8 & 216 \\ 
+Eccentricity & 2,033 & 1.038 & 1.040 & 0 & 0 & 2 & 6 \\ 
+closnesscentrality & 2,033 & .541 & .434 & 0 & 0 & 1 & 1 \\ 
+harmonicclosnesscentrality & 2,033 & .566 & .440 & 0 & 0 & 1 & 1 \\ 
+betweenesscentrality & 2,033 & 1.973 & 20.934 & 0 & 0 & 0 & 470 \\ 
+modularity\_class & 2,033 & 3.983 & 2.137 & 0 & 2 & 6 & 8 \\ 
+clustering & 2,033 & .034 & .090 & 0 & 0 & 0 & 0 \\ 
+eigencentrality & 2,033 & .013 & .047 & 0 & 0 & .01 & 1 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 

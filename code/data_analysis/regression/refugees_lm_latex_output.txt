@@ -1,0 +1,49 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 4:39:25 PM
+\begin{table}[!htbp] \centering 
+  \caption{Regression models for topic: refugees} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & communication (combined mlm) & interacted (logit) & communication (conditional mlm) \\ 
+\\[-1.8ex] & \textit{OLS} & \textit{logistic} & \textit{OLS} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ outdegree & 0.001$^{***}$ & 0.040$^{***}$ & 0.012$^{***}$ \\ 
+  & (0.00000) & (0.0003) & (0.001) \\ 
+  & & & \\ 
+ eigencentrality & 0.018$^{***}$ & $-$4.875$^{***}$ & 1.587$^{***}$ \\ 
+  & (0.001) & (0.110) & (0.174) \\ 
+  & & & \\ 
+ clustering & $-$0.002$^{***}$ & 0.609$^{***}$ & $-$0.881$^{***}$ \\ 
+  & (0.0003) & (0.058) & (0.250) \\ 
+  & & & \\ 
+ u2\_outdegree & 0.0001$^{***}$ & $-$0.001$^{***}$ & 0.010$^{***}$ \\ 
+  & (0.00000) & (0.0002) & (0.0005) \\ 
+  & & & \\ 
+ u2\_eigencentrality & 0.151$^{***}$ & 6.940$^{***}$ & 1.411$^{***}$ \\ 
+  & (0.001) & (0.032) & (0.084) \\ 
+  & & & \\ 
+ u2\_clustering & $-$0.017$^{***}$ & 0.166$^{***}$ & $-$2.957$^{***}$ \\ 
+  & (0.0003) & (0.046) & (0.139) \\ 
+  & & & \\ 
+ Constant & 0.003$^{***}$ & $-$7.306$^{***}$ & 0.885$^{***}$ \\ 
+  & (0.00004) & (0.013) & (0.032) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 8,711,352 & 8,711,352 & 13,846 \\ 
+R$^{2}$ & 0.022 &  & 0.201 \\ 
+Adjusted R$^{2}$ & 0.022 &  & 0.201 \\ 
+Log Likelihood &  & $-$75,693.210 &  \\ 
+Akaike Inf. Crit. &  & 151,400.400 &  \\ 
+Residual Std. Error & 0.129 (df = 8711345) &  & 2.330 (df = 13839) \\ 
+F Statistic & 32,597.910$^{***}$ (df = 6; 8711345) &  & 581.356$^{***}$ (df = 6; 13839) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 

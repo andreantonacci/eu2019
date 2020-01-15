@@ -1,0 +1,27 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 10:10:33 AM
+\begin{table}[!htbp] \centering 
+  \caption{Summary stats for topic: refugees} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+indegree & 2,952 & 4.725 & 16.975 & 0 & 0 & 2 & 430 \\ 
+outdegree & 2,952 & 4.725 & 14.191 & 0 & 0 & 4 & 265 \\ 
+Degree & 2,952 & 9.451 & 24.953 & 1 & 3 & 5 & 430 \\ 
+weighted indegree & 2,952 & 9.395 & 49.085 & 0 & 0 & 3 & 1,614 \\ 
+weighted outdegree & 2,952 & 9.395 & 46.012 & 0 & 0 & 5 & 1,120 \\ 
+Weighted Degree & 2,952 & 18.791 & 81.807 & 1 & 4 & 7 & 1,864 \\ 
+Eccentricity & 2,952 & 2.932 & 3.238 & 0 & 0 & 7 & 10 \\ 
+closnesscentrality & 2,952 & .358 & .378 & 0.000 & 0.000 & .643 & 1.000 \\ 
+harmonicclosnesscentrality & 2,952 & .371 & .382 & 0.000 & 0.000 & .750 & 1.000 \\ 
+betweenesscentrality & 2,952 & 665.544 & 6,589.509 & 0.000 & 0.000 & 0.000 & 213,888.300 \\ 
+modularity\_class & 2,952 & 2.041 & .447 & 0 & 2 & 2 & 8 \\ 
+clustering & 2,952 & .094 & .177 & 0.000 & 0.000 & .160 & 1.000 \\ 
+eigencentrality & 2,952 & .026 & .081 & 0.000 & 0.000 & .003 & 1.000 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 

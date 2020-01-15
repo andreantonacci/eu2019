@@ -1,0 +1,49 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 4:37:31 PM
+\begin{table}[!htbp] \centering 
+  \caption{Regression models for topic: brexit} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & communication (combined mlm) & interacted (logit) & communication (conditional mlm) \\ 
+\\[-1.8ex] & \textit{OLS} & \textit{logistic} & \textit{OLS} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ outdegree & 0.0003$^{***}$ & 0.079$^{***}$ & 0.004$^{***}$ \\ 
+  & (0.00000) & (0.001) & (0.001) \\ 
+  & & & \\ 
+ eigencentrality & 0.0002 & $-$92.026$^{***}$ & $-$0.001 \\ 
+  & (0.0002) & (3.070) & (0.500) \\ 
+  & & & \\ 
+ clustering & $-$0.001$^{***}$ & 4.018$^{***}$ & $-$0.205 \\ 
+  & (0.0002) & (0.231) & (0.234) \\ 
+  & & & \\ 
+ u2\_outdegree & $-$0.00000 & $-$0.434$^{***}$ & 0.015$^{***}$ \\ 
+  & (0.00000) & (0.011) & (0.003) \\ 
+  & & & \\ 
+ u2\_eigencentrality & 0.058$^{***}$ & 6.101$^{***}$ & 0.136$^{***}$ \\ 
+  & (0.0002) & (0.037) & (0.035) \\ 
+  & & & \\ 
+ u2\_clustering & $-$0.002$^{***}$ & $-$0.069 & $-$0.693 \\ 
+  & (0.0002) & (0.545) & (0.605) \\ 
+  & & & \\ 
+ Constant & 0.001$^{***}$ & $-$9.227$^{***}$ & 1.383$^{***}$ \\ 
+  & (0.00001) & (0.030) & (0.014) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 23,449,806 & 23,449,806 & 9,146 \\ 
+R$^{2}$ & 0.006 &  & 0.008 \\ 
+Adjusted R$^{2}$ & 0.006 &  & 0.007 \\ 
+Log Likelihood &  & $-$67,633.010 &  \\ 
+Akaike Inf. Crit. &  & 135,280.000 &  \\ 
+Residual Std. Error & 0.032 (df = 23449799) &  & 0.784 (df = 9139) \\ 
+F Statistic & 22,474.450$^{***}$ (df = 6; 23449799) &  & 12.133$^{***}$ (df = 6; 9139) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 

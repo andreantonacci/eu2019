@@ -1,0 +1,49 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 4:40:22 PM
+\begin{table}[!htbp] \centering 
+  \caption{Regression models for topic: terrorism} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & communication (combined mlm) & interacted (logit) & communication (conditional mlm) \\ 
+\\[-1.8ex] & \textit{OLS} & \textit{logistic} & \textit{OLS} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ outdegree & 0.001$^{***}$ & 0.304$^{***}$ & $-$0.068$^{***}$ \\ 
+  & (0.00002) & (0.005) & (0.008) \\ 
+  & & & \\ 
+ eigencentrality & $-$0.001$^{*}$ & $-$7.341$^{***}$ & 0.277 \\ 
+  & (0.001) & (1.014) & (0.424) \\ 
+  & & & \\ 
+ clustering & $-$0.001$^{*}$ & 0.663$^{***}$ & $-$0.340$^{**}$ \\ 
+  & (0.0004) & (0.157) & (0.172) \\ 
+  & & & \\ 
+ u2\_outdegree & $-$0.0003$^{***}$ & $-$0.703$^{***}$ & 0.066$^{***}$ \\ 
+  & (0.00002) & (0.013) & (0.012) \\ 
+  & & & \\ 
+ u2\_eigencentrality & 0.103$^{***}$ & 7.391$^{***}$ & $-$0.638$^{***}$ \\ 
+  & (0.001) & (0.072) & (0.092) \\ 
+  & & & \\ 
+ u2\_clustering & $-$0.003$^{***}$ & $-$0.347 & 0.218 \\ 
+  & (0.0004) & (0.237) & (0.333) \\ 
+  & & & \\ 
+ Constant & 0.002$^{***}$ & $-$8.113$^{***}$ & 2.109$^{***}$ \\ 
+  & (0.00003) & (0.033) & (0.033) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 4,131,056 & 4,131,056 & 4,452 \\ 
+R$^{2}$ & 0.006 &  & 0.028 \\ 
+Adjusted R$^{2}$ & 0.006 &  & 0.027 \\ 
+Log Likelihood &  & $-$28,825.970 &  \\ 
+Akaike Inf. Crit. &  & 57,665.950 &  \\ 
+Residual Std. Error & 0.068 (df = 4131049) &  & 0.997 (df = 4445) \\ 
+F Statistic & 4,091.516$^{***}$ (df = 6; 4131049) &  & 21.444$^{***}$ (df = 6; 4445) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 

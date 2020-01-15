@@ -1,0 +1,49 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 4:40:48 PM
+\begin{table}[!htbp] \centering 
+  \caption{Regression models for topic: unemployment} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & communication (combined mlm) & interacted (logit) & communication (conditional mlm) \\ 
+\\[-1.8ex] & \textit{OLS} & \textit{logistic} & \textit{OLS} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ outdegree & 0.001$^{***}$ & 0.219$^{***}$ & 0.017$^{***}$ \\ 
+  & (0.00002) & (0.004) & (0.004) \\ 
+  & & & \\ 
+ eigencentrality & $-$0.001 & $-$7.961$^{***}$ & $-$0.192 \\ 
+  & (0.001) & (1.111) & (0.294) \\ 
+  & & & \\ 
+ clustering & $-$0.001$^{**}$ & 0.693$^{***}$ & $-$0.196 \\ 
+  & (0.001) & (0.215) & (0.149) \\ 
+  & & & \\ 
+ u2\_outdegree & $-$0.0002$^{***}$ & $-$0.629$^{***}$ & $-$0.006 \\ 
+  & (0.00002) & (0.015) & (0.006) \\ 
+  & & & \\ 
+ u2\_eigencentrality & 0.155$^{***}$ & 6.775$^{***}$ & $-$0.204$^{***}$ \\ 
+  & (0.001) & (0.062) & (0.043) \\ 
+  & & & \\ 
+ u2\_clustering & $-$0.005$^{***}$ & 0.485$^{*}$ & $-$0.248 \\ 
+  & (0.001) & (0.273) & (0.246) \\ 
+  & & & \\ 
+ Constant & 0.002$^{***}$ & $-$7.644$^{***}$ & 1.398$^{***}$ \\ 
+  & (0.00004) & (0.037) & (0.020) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,975,430 & 1,975,430 & 3,296 \\ 
+R$^{2}$ & 0.020 &  & 0.018 \\ 
+Adjusted R$^{2}$ & 0.020 &  & 0.016 \\ 
+Log Likelihood &  & $-$18,883.490 &  \\ 
+Akaike Inf. Crit. &  & 37,780.990 &  \\ 
+Residual Std. Error & 0.062 (df = 1975423) &  & 0.611 (df = 3289) \\ 
+F Statistic & 6,872.124$^{***}$ (df = 6; 1975423) &  & 9.946$^{***}$ (df = 6; 3289) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 

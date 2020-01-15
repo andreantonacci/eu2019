@@ -1,0 +1,27 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 10:10:33 AM
+\begin{table}[!htbp] \centering 
+  \caption{Summary stats for topic: populism} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+indegree & 704 & 1.950 & 4.746 & 0 & 0 & 2 & 53 \\ 
+outdegree & 704 & 1.950 & 1.987 & 0 & 0 & 3 & 16 \\ 
+Degree & 704 & 3.901 & 4.545 & 1 & 2 & 4 & 53 \\ 
+weighted indegree & 704 & 4.470 & 10.809 & 0 & 0 & 4 & 145 \\ 
+weighted outdegree & 704 & 4.470 & 5.318 & 0 & 0 & 8 & 72 \\ 
+Weighted Degree & 704 & 8.940 & 11.170 & 1 & 4 & 10 & 145 \\ 
+Eccentricity & 704 & .751 & .829 & 0 & 0 & 1 & 5 \\ 
+closnesscentrality & 704 & .501 & .467 & 0 & 0 & 1 & 1 \\ 
+harmonicclosnesscentrality & 704 & .515 & .474 & 0 & 0 & 1 & 1 \\ 
+betweenesscentrality & 704 & .555 & 3.573 & 0 & 0 & 0 & 42 \\ 
+modularity\_class & 704 & 3.357 & 2.569 & 0 & 1 & 5 & 8 \\ 
+clustering & 704 & .042 & .101 & 0 & 0 & 0 & 0 \\ 
+eigencentrality & 704 & .032 & .106 & 0 & 0 & .01 & 1 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 

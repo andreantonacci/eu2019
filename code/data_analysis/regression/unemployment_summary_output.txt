@@ -1,0 +1,27 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jan 03, 2020 - 10:10:34 AM
+\begin{table}[!htbp] \centering 
+  \caption{Summary stats for topic: unemployment} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+indegree & 1,406 & 2.370 & 10.014 & 0 & 0 & 1 & 166 \\ 
+outdegree & 1,406 & 2.370 & 2.124 & 0 & 0 & 3 & 19 \\ 
+Degree & 1,406 & 4.740 & 9.865 & 1 & 3 & 3 & 169 \\ 
+weighted indegree & 1,406 & 3.322 & 14.036 & 0 & 0 & 2 & 257 \\ 
+weighted outdegree & 1,406 & 3.322 & 3.339 & 0 & 0 & 4 & 50 \\ 
+Weighted Degree & 1,406 & 6.644 & 13.884 & 1 & 4 & 5 & 257 \\ 
+Eccentricity & 1,406 & 1.165 & 1.075 & 0 & 0 & 2 & 4 \\ 
+closnesscentrality & 1,406 & .571 & .421 & 0 & 0 & 1 & 1 \\ 
+harmonicclosnesscentrality & 1,406 & .599 & .426 & 0 & 0 & 1 & 1 \\ 
+betweenesscentrality & 1,406 & 2.142 & 24.824 & 0 & 0 & 0 & 692 \\ 
+modularity\_class & 1,406 & 6.751 & 1.729 & 0 & 6 & 8 & 8 \\ 
+clustering & 1,406 & .027 & .079 & 0 & 0 & 0 & 0 \\ 
+eigencentrality & 1,406 & .013 & .055 & 0 & 0 & .004 & 1 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
