@@ -152,14 +152,17 @@ Automated execution is available for the data preparation pipeline only (as show
 1. **[Download files](https://github.com/andreantonacci/eu2019/releases/tag/v1.0)** from the *releases* tab in one directory.
 2. Then, simply run ```initialize.py```.
 
-## Contributing
+## Want more?
+You can find the source code for our real-time dashboard [here](https://github.com/marcodelu/eu2019-web).
+
+#### Contributing
 Feel free to reproduce this study or emulate this setup for your own project. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 #### Restricted Data Files
 
 You can request access to the raw data or derived files by email at the following address:
 
-```a.d.antonacci [AT] tilburguniversity.edu```
+```a.d.antonacci [AT] tilburguniversity [DOT] edu```
 
-## License
+#### License
 All materials are licensed under a Creative Commons [CC-BY-SA-4.0](https://choosealicense.com/licenses/cc-by-sa-4.0/) license.
